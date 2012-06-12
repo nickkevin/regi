@@ -1,0 +1,33 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User name</th>
+    <th>Password</th>
+    <th>Confirm password</th>
+    <th>Email id</th>
+    <th>I want to be a</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registrations.each do |registration| %>
+  <tr>
+    <td><%= registration.Name %></td>
+    <td><%= registration.User_Name %></td>
+    <td><%= registration.Password %></td>
+    <td><%= registration.Confirm_Password %></td>
+    <td><%= registration.Email_ID %></td>
+    <td><%= registration.I_Want_to_be_a %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registration', new_registration_path %>

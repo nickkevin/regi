@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+
+<head>
+
+<title>title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="470" marginheight="0">
+<!-- Save for Web Slices (title.psd) -->
+<img src="images/action_cuttitlr.gif" width="1000" height="150" alt="">
+<!-- End Save for Web Slices -->
+</body>
+<p>&nbsp;</p>
+
+<script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=400,height=400');
+return false;
+}
+//-->
+</SCRIPT>
+</head>
+
+<head>
+
+<h1><center>Registration</center></H1>
+<Style>
+BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
+</Style>
+
+<body background="images\lib.jpg" style="overflow: hidden"> 
+<form action="nureg.jsp" name="myform" method=post>
+<div align="center">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<table>
+
+<tr><td>
+<strong>Name:</strong></td>                                  
+       <td><input type="text"
+                  name="firstname"
+                 size="30"></td>
+</tr>
+
+<tr>
+<td><strong>User Name:</strong></td>                                  
+       <td><input type="text"
+                  name="lastname"
+                 size="30"></td>
+</tr>
+
+<tr>
+<td><strong>Password: </strong></td>
+<td><input type="password"  name="password" size=30> </td>
+</tr>
+
+<tr>
+<td><strong>Confirm Password: </strong></td>
+<td><input type="password"  name="confirmpassword" size=30> </td>
+</tr>
+
+<tr>
+<td><strong>Email ID:</strong></td>                                  
+       <td><input type="text"
+                  name="email"
+                 size="30"><br>
+     eg: abc@gmail.com </td>
+</tr>
+<tr>
+<td><strong>I Want to be a:</strong></td>
+<td>
+
+<div id="ScrollCB" style="height:150;width:200px;overflow:auto"> 
+<input type="checkbox" id="scb1" name="scb1" value="1">Director<br> 
+<input type="checkbox" id="scb2" name="scb2" value="2">Writer<br> 
+<input type="checkbox" id="scb3" name="scb3" value="3">Actor<br> 
+<input type="checkbox" id="scb4" name="scb4" value="4">Actress<br> 
+<input type="checkbox" id="scb5" name="scb5" value="5">Producer<br> 
+<input type="checkbox" id="scb6" name="scb6" value="6">Cinematographer<br> 
+<input type="checkbox" id="scb7" name="scb7" value="7">Editor<br> 
+<input type="checkbox" id="scb8" name="scb8" value="8">Music Director<br> 
+<input type="checkbox" id="scb9" name="scb9" value="9">Choreographer<br> 
+<input type="checkbox" id="scb10" name="scb10" value="10">Playback Singer<br> 
+<input type="checkbox" id="scb11" name="scb11" value="11">Music Instrument Player<br> 
+<input type="checkbox" id="scb12" name="scb12" value="12">Stunt Master<br> 
+<input type="checkbox" id="scb13" name="scb13" value="13">Dance Master<br> 
+<input type="checkbox" id="scb14" name="scb14" value="14">Action<br> 
+<input type="checkbox" id="scb15" name="scb15" value="15">Sound Engineer<br> 
+</div> 
+
+</select>
+
+</td>
+
+</tr>
+
+<tr>
+<td colspan="4" height="15"><input type="checkbox"
+           name="tc">
+<A 
+   HREF="terms.html" 
+   onClick="return popup(this, 'notes')">I Accept The Terms And Conditions</A><br></td></tr>
+<tr>
+    <td align="right"></td>
+    <td>
+	<div id='myform_errorloc' class='error_strings'>
+                              </div>
+	</td>
+</tr>
+<tr height="10">
+<td></td>
+<td colspan="4" height="10"><input type="submit"  value="Submit" >
+<INPUT TYPE="button" onClick="window.location.href=window.location.href" VALUE="Refresh"></td>
+</tr>
+
+</table>
+</div>
+</form>
+
+<script language="JavaScript" type="text/javascript">
+//You should create the validator only after the definition of the HTML form
+  var frmvalidator;
+  frmvalidator = new Validator("myform");
+
+  frmvalidator.EnableMsgsTogether();
+  frmvalidator.addValidation("firstname","req","Please enter your First Name");
+  frmvalidator.addValidation("firstname","maxlen=20",	"Maximum length for First Name is 20");
+  frmvalidator.addValidation("firstname","minlen=4",	"Minimum length for First Name is 4");
+  frmvalidator.addValidation("firstname","alpha_s","First Name:Alphabetic chars only");
+  
+  frmvalidator.addValidation("lastname","req","Please enter your Last Name");
+  frmvalidator.addValidation("lastname","maxlen=20","Maximum length for Last Name is 20");
+  frmvalidator.addValidation("lastname","minlen=5","Minimum length for Last Name is 5");
+  frmvalidator.addValidation("lastname","alpha_s","Last Name:Alphabetic chars only");
+  
+  frmvalidator.addValidation("email","maxlen=40","Maximum length for email is 40");
+  frmvalidator.addValidation("email","req");
+  frmvalidator.addValidation("email","email");
+  
+  frmvalidator.addValidation("phone","req","Please enter your Contact No");
+  frmvalidator.addValidation("phone","maxlen=10","Maximum length for Contact No is 10");
+  frmvalidator.addValidation("phone","minlen=10","Minimum length for Contact No is 10");
+  frmvalidator.addValidation("phone","numeric","Contact NO:Digits only");
+  
+  frmvalidator.addValidation("address","req","Please enter your Address");
+  frmvalidator.addValidation("address","maxlen=50","Maximum length for Address is 50");
+
+  frmvalidator.addValidation("permanentaddress","req","Please enter your Permanent Address");
+  frmvalidator.addValidation("permanentaddress","maxlen=50","Max length for Permanent Address is 50");
+
+  frmvalidator.addValidation("registerno","req","Please enter your Register No");
+  frmvalidator.addValidation("registerno","maxlen=9","Maximum length for Register No is 9");
+  frmvalidator.addValidation("registerno","minlen=9","Minimum length for Register No is 9");
+  frmvalidator.addValidation("registerno","numeric","Register NO in digits only");
+
+  
+  frmvalidator.addValidation("password","req","Please enter your Password");
+  frmvalidator.addValidation("password","minlen=6","Minimum length for Password  is 6");
+  frmvalidator.addValidation("password","maxlen=15","Maximum length for Passowrd  is 15");
+  frmvalidator.addValidation("password","alphanumeric","Password: Only Digits and Characters");
+  frmvalidator.addValidation("confirmpassword","req","Please enter your Confirm Password");
+  frmvalidator.addValidation("confirmpassword","eqelmnt=password","The confirmed password is not same as password");
+  frmvalidator.addValidation("password","neelmnt=registerno","The password should not be same as Register No");
+
+  frmvalidator.addValidation("dob","req","Please enter your Date of Birth");
+  frmvalidator.addValidation("dob","maxlen=10","Maximum length for Date of Birth is 10");
+  frmvalidator.addValidation("dob","minlen=10","Minimum length for Date of Birth is 10");
+
+  frmvalidator.addValidation("branch","dontselect=na");
+  frmvalidator.addValidation("year","dontselect=na");
+  frmvalidator.addValidation("gender","dontselect=na");
+ 
+
+  frmvalidator.addValidation("tc","shouldselchk=on","Please Accept The Terms And Conditions");
+
+</script>
+</body>
+</html> 

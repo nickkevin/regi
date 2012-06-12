@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @registration.Name %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @registration.User_Name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @registration.Password %>
+</p>
+
+<p>
+  <b>Confirm password:</b>
+  <%= @registration.Confirm_Password %>
+</p>
+
+<p>
+  <b>Email id:</b>
+  <%= @registration.Email_ID %>
+</p>
+
+<p>
+  <b>I want to be a:</b>
+  <%= @registration.I_Want_to_be_a %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>
